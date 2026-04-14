@@ -72,6 +72,26 @@ const Projects = ({ darkMode }) => {
       githubUrl: 'https://github.com/Kiran6976/Time-Series-Forecasting-using-Fuzzy.git',
       featured: false,
     },
+    {
+      id: 5,
+      title: 'EditIV – Social Media Agency Website',
+      description: 'A full-stack MERN portfolio website for a social media agency, featuring dynamic content management, an admin dashboard, animated hero section, and a premium modern UI.',
+      image: '📱',
+      techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT', 'Cloudinary'],
+      category: 'fullstack',
+      liveUrl: 'https://editiv.com',
+      featured: true,
+    },
+    {
+      id: 6,
+      title: '32 Signature Smilez – Dental Clinic Website',
+      description: 'A fully responsive MERN stack website for a dental clinic, featuring service pages, appointment booking, admin dashboard for managing appointments, gallery, and blog content.',
+      image: '🦷',
+      techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'CSS3', 'Cloudinary'],
+      category: 'fullstack',
+      liveUrl: 'https://32signaturesmilez.com',
+      featured: true,
+    },
     
   ];
 
