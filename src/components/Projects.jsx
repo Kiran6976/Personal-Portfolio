@@ -92,6 +92,16 @@ const Projects = ({ darkMode }) => {
       liveUrl: 'https://32signaturesmilez.com',
       featured: true,
     },
+    {
+      id: 7,
+      title: 'Apnahome - Real Estate Platform',
+      description: 'A modern and feature-rich real estate platform built with the MERN stack. Designed for seamless property buying and renting with user-friendly search and secure backend features.',
+      image: '🏠',
+      techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+      category: 'fullstack',
+      liveUrl: 'https://apnahome.site',
+      featured: true,
+    },
     
   ];
 
@@ -216,32 +226,36 @@ const Projects = ({ darkMode }) => {
 
                 {/* Links */}
                 <div className="flex items-center gap-4">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                      darkMode 
-                        ? 'text-gray-400 hover:text-indigo-400' 
-                        : 'text-gray-600 hover:text-indigo-600'
-                    }`}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                      darkMode 
-                        ? 'text-gray-400 hover:text-indigo-400' 
-                        : 'text-gray-600 hover:text-indigo-600'
-                    }`}
-                  >
-                    <Github className="w-4 h-4" />
-                    Code
-                  </a>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                        darkMode 
+                          ? 'text-gray-400 hover:text-indigo-400' 
+                          : 'text-gray-600 hover:text-indigo-600'
+                      }`}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  )}
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`flex items-center gap-2 text-sm font-medium transition-colors ${
+                        darkMode 
+                          ? 'text-gray-400 hover:text-indigo-400' 
+                          : 'text-gray-600 hover:text-indigo-600'
+                      }`}
+                    >
+                      <Github className="w-4 h-4" />
+                      Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
