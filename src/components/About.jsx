@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { User, Target, Briefcase, Coffee, MapPin, Calendar } from 'lucide-react';
+import profileImg from '../assets/profile.jpeg';
 
 /**
  * About Section Component
@@ -60,15 +61,15 @@ const About = ({ darkMode }) => {
           {/* Image/Avatar Section */}
           <div className={`${isVisible ? 'animate-fade-in-left' : 'opacity-0'}`}>
             <div className="relative">
-              {/* Profile Image Placeholder */}
-              <div className={`relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-2xl overflow-hidden ${
-                darkMode ? 'bg-gradient-to-br from-indigo-600 to-purple-600' : 'bg-gradient-to-br from-indigo-500 to-purple-500'
-              }`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <User className="w-32 h-32 text-white/50" />
-                </div>
+              {/* Profile Image */}
+              <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src={profileImg} 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
                 {/* Decorative border */}
-                <div className="absolute inset-0 border-4 border-indigo-500/30 rounded-2xl transform rotate-6" />
+                <div className="absolute inset-0 border-4 border-indigo-500/30 rounded-2xl transform rotate-6 pointer-events-none" />
               </div>
               
               {/* Floating Badge */}
